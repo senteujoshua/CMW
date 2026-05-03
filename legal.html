@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="LUXORA Agency legal documents, company rules, dos &amp; don'ts, 18+ verification, NDA, privacy policy and terms of use." />
+<title>Legal &amp; Rules — LUXORA Agency</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+  .legal-layout {
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    gap: 4rem;
+    padding: 4rem 0 6rem;
+  }
+  @media (max-width: 980px) {
+    .legal-layout { grid-template-columns: 1fr; gap: 2rem; }
+    .legal-toc { position: relative; top: 0; }
+  }
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-arrow-left" viewBox="0 0 24 24"><path d="M19 12H5M11 5L4 12l7 7" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-check-circle" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M8 12.5l3 3 5-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-cross" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M9 9l6 6M15 9l-6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 5-3.5 8.5-8 9-4.5-.5-8-4-8-9V6l8-3z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-warn" viewBox="0 0 24 24"><path d="M12 3l10 18H2L12 3z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M12 10v5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><circle cx="12" cy="18" r="0.9" fill="currentColor"/></symbol>
+    <symbol id="i-doc" viewBox="0 0 24 24"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9l-6-6z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M14 3v6h6M9 13h6M9 17h6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></symbol>
+    <symbol id="i-instagram" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="17.5" cy="6.5" r="0.8" fill="currentColor"/></symbol>
+    <symbol id="i-telegram" viewBox="0 0 24 24"><path d="M21.5 4.2 2.8 11.4c-1.1.4-1 1 .1 1.4l4.7 1.5 1.8 5.4c.2.6.4.8.8.8.4 0 .6-.2.9-.5l2.3-2.2 4.7 3.5c.9.5 1.5.2 1.7-.8l3.1-14.6c.2-1.1-.4-1.6-1.4-1.3z" fill="currentColor"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24"><path d="M17.5 3h3l-7 8 8.2 10h-6.5l-5-6.4L4.4 21H1.4l7.5-8.6L1 3h6.6l4.5 6 5.4-6zm-1 16h1.8L7.5 4.8H5.6L16.5 19z" fill="currentColor"/></symbol>
+  </defs>
+</svg>
+
+<div class="scroll-progress" id="scrollProgress"></div>
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- ===== NAV ===== -->
+<nav class="nav scrolled" id="nav">
+  <div class="container nav-inner">
+    <a href="index.html" class="logo" aria-label="LUXORA Agency home">
+      <span class="luxora">LUXORA</span><span class="agency">AGENCY</span>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#how">How It Works</a></li>
+      <li><a href="index.html#faq">FAQ</a></li>
+      <li><a href="legal.html">Legal</a></li>
+      <li><a href="apply-creator.html" class="btn btn-outline nav-cta">Apply</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ===== HERO ===== -->
+<header class="legal-hero">
+  <div class="hero-bg" aria-hidden="true">
+    <div class="blob b1"></div>
+    <div class="blob b2"></div>
+  </div>
+  <div class="container apply-hero-content" style="position:relative; z-index:2;">
+    <a href="index.html" style="display:inline-flex; align-items:center; gap:0.5rem; color:var(--text-mute); font-size:0.85rem; letter-spacing:0.1em; text-transform:uppercase; margin-bottom:2rem;">
+      <svg class="icon" width="16" height="16"><use href="#i-arrow-left"/></svg>
+      Back to home
+    </a>
+    <span class="eyebrow center reveal">Legal &amp; Company Rules</span>
+    <h1 class="reveal delay-1"><span class="grad">The fine print —</span> <em>made plain.</em></h1>
+    <p class="reveal delay-2">Our policies, the rules everyone on our roster lives by, and our age-verification standard. Read carefully before applying.</p>
+  </div>
+</header>
+
+<!-- ===== AGE GATE ===== -->
+<section class="container">
+  <div class="age-gate reveal">
+    <div class="badge-18">18+</div>
+    <h2>Adults only.</h2>
+    <p>LUXORA Agency operates exclusively in the adult creator industry. By using this site, applying as a creator, applying as a chatter, or otherwise engaging with our services, <strong style="color:var(--cream);">you confirm that you are 18 years of age or older</strong> and legally able to view, produce, or moderate adult content in your jurisdiction. Anyone under 18 is strictly prohibited from applying or interacting with our services. Identity and age verification is mandatory before any onboarding step.</p>
+  </div>
+</section>
+
+<!-- ===== DOS / DON'TS ===== -->
+<section class="container" id="rules">
+  <div class="center-head reveal" style="margin-top:4rem;">
+    <span class="eyebrow center">Company Rules</span>
+    <h2 class="section-title" style="margin-bottom:0.6rem;">The Dos &amp; <em>Don'ts.</em></h2>
+    <p class="section-lead" style="text-align:center; margin: 0 auto 1rem;">Every team member, partner, and creator on our roster agrees to these. Violations are grounds for immediate termination of partnership.</p>
+  </div>
+
+  <div class="rules-grid reveal delay-1">
+    <div class="rules-col dos">
+      <h3><svg class="icon"><use href="#i-check-circle"/></svg> The Dos</h3>
+      <ul class="rules-list">
+        <li><svg><use href="#i-check"/></svg>Verify age &amp; identity (18+) before any work begins.</li>
+        <li><svg><use href="#i-check"/></svg>Sign and honor the NDA before accessing any creator account.</li>
+        <li><svg><use href="#i-check"/></svg>Respect every creator's voice, brand, and stated boundaries.</li>
+        <li><svg><use href="#i-check"/></svg>Use secure passwords and two-factor authentication on all accounts.</li>
+        <li><svg><use href="#i-check"/></svg>Report suspicious behavior, scams, or platform violations immediately.</li>
+        <li><svg><use href="#i-check"/></svg>Communicate openly with your team lead and your assigned creators.</li>
+        <li><svg><use href="#i-check"/></svg>Stay current with platform terms (OnlyFans, Fansly, Fanvue, etc.).</li>
+        <li><svg><use href="#i-check"/></svg>Treat every subscriber and team member with respect.</li>
+      </ul>
+    </div>
+
+    <div class="rules-col donts">
+      <h3><svg class="icon"><use href="#i-cross"/></svg> The Don'ts</h3>
+      <ul class="rules-list">
+        <li><svg><use href="#i-cross"/></svg>Never apply, work, or interact if you are under 18 — strictly enforced.</li>
+        <li><svg><use href="#i-cross"/></svg>Never share creator content, identity, or login credentials.</li>
+        <li><svg><use href="#i-cross"/></svg>Never engage in messaging that is illegal, exploitative, or violates platform rules.</li>
+        <li><svg><use href="#i-cross"/></svg>Never reference real-world meetups, contact info, or off-platform exchanges.</li>
+        <li><svg><use href="#i-cross"/></svg>Never use AI bots or auto-responders unless explicitly approved.</li>
+        <li><svg><use href="#i-cross"/></svg>Never poach creators, chatters, or trade secrets to competitors.</li>
+        <li><svg><use href="#i-cross"/></svg>Never solicit, accept, or engage with anyone who appears underage.</li>
+        <li><svg><use href="#i-cross"/></svg>Never breach confidentiality, even after a partnership ends.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ===== LEGAL DOCS ===== -->
+<section class="container">
+  <div class="legal-layout">
+    <aside class="legal-toc reveal">
+      <h4>Documents</h4>
+      <ul>
+        <li><a href="#privacy">Privacy Policy</a></li>
+        <li><a href="#terms">Terms of Use</a></li>
+        <li><a href="#nda">NDA &amp; Confidentiality</a></li>
+        <li><a href="#age">Age Verification</a></li>
+        <li><a href="#compliance">Platform Compliance</a></li>
+        <li><a href="#cookies">Cookie Policy</a></li>
+        <li><a href="#contact">Contact &amp; DMCA</a></li>
+      </ul>
+    </aside>
+
+    <div class="legal-doc reveal delay-1">
+
+      <h2 id="privacy">Privacy Policy</h2>
+      <p><em>Last updated: 2026</em></p>
+      <p>LUXORA Agency ("we," "our," "us") respects your privacy. This policy explains what we collect, why we collect it, and how we protect it.</p>
+
+      <h3>What we collect</h3>
+      <ul>
+        <li><strong>Application data:</strong> Name, email, age confirmation, country, platform handles, and any answers you submit through our application forms.</li>
+        <li><strong>Creator data:</strong> Public creator profiles, performance metrics, content guidelines, and brand-voice notes shared with us during onboarding.</li>
+        <li><strong>Chatter data:</strong> Identity documents (for verification), tax/payment information (where applicable), training records, and performance data.</li>
+        <li><strong>Technical data:</strong> Anonymized analytics, page visits, device type, and approximate location for site improvement.</li>
+      </ul>
+
+      <h3>How we use it</h3>
+      <ul>
+        <li>To review applications and onboard partners and team members.</li>
+        <li>To provide chat moderation services and produce performance reports.</li>
+        <li>To process payments and meet legal/tax obligations.</li>
+        <li>To communicate updates, opportunities, and important policy changes.</li>
+      </ul>
+
+      <h3>How we protect it</h3>
+      <p>All data is stored encrypted, behind role-based access controls. Only verified, NDA-signed staff may view sensitive material, and only when required for their role. We never sell, rent, or share your data with third parties for marketing.</p>
+
+      <h3>Your rights</h3>
+      <p>You may request access, correction, or deletion of your personal data at any time by emailing <a href="mailto:privacy@luxoraagency.com">privacy@luxoraagency.com</a>. We comply with GDPR, CCPA, and other applicable privacy regulations.</p>
+
+      <h2 id="terms">Terms of Use</h2>
+      <p><em>Last updated: 2026</em></p>
+      <p>By accessing this website or applying for any LUXORA Agency role or partnership, you agree to the following terms.</p>
+
+      <h3>Eligibility</h3>
+      <ul>
+        <li>You must be <strong>18 years of age or older</strong> to use any LUXORA service.</li>
+        <li>You must be legally permitted to view, produce, or moderate adult content in your jurisdiction.</li>
+        <li>Creators applying for partnership must meet our minimum threshold of <strong>5,000+ followers or active subscribers</strong> across major adult creator platforms.</li>
+      </ul>
+
+      <h3>Service description</h3>
+      <p>LUXORA Agency provides chat moderation, fan-engagement, and inbox-management services to verified adult content creators. We do not produce, distribute, or own the content of any creator we work with. We do not own creator accounts, content rights, or intellectual property.</p>
+
+      <h3>Conduct</h3>
+      <p>Users of this site, applicants, and onboarded partners agree not to: (a) use the service for any illegal purpose; (b) attempt to bypass age or identity verification; (c) impersonate another person; (d) interfere with the operation of our site or services; (e) violate the terms of any third-party platform we operate on.</p>
+
+      <h3>Termination</h3>
+      <p>We reserve the right to refuse service, terminate partnerships, or remove accounts at our discretion — particularly in cases of policy violation, fraud, or behavior that endangers other users or creators.</p>
+
+      <h3>Disclaimer</h3>
+      <p>Earnings figures, testimonials, and statistics shown on this site reflect past results from selected partners and are <strong>not guaranteed</strong> for future clients. Individual results vary based on follower count, content strategy, niche, and platform conditions.</p>
+
+      <h2 id="nda">NDA &amp; Confidentiality</h2>
+      <p>Every chatter, manager, and LUXORA team member signs a binding non-disclosure agreement before being granted access to any creator account, profile, or business data. This NDA covers:</p>
+      <ul>
+        <li>The identity of any creator we work with, past or present.</li>
+        <li>Any content, conversations, schedules, earnings, or strategies belonging to a creator.</li>
+        <li>Internal LUXORA training material, tooling, processes, and pricing.</li>
+        <li>Any data accessed through the course of work, on or off platform.</li>
+      </ul>
+      <p>NDA obligations survive the end of any partnership or employment indefinitely.</p>
+
+      <h2 id="age">Age Verification</h2>
+      <p>LUXORA Agency operates exclusively in the adult industry. We require:</p>
+      <ul>
+        <li>Self-confirmation of age (18+) at the application stage.</li>
+        <li>Government-issued ID verification before onboarding to any role.</li>
+        <li>Proof of legal account ownership for creators applying for partnership.</li>
+      </ul>
+      <p>Any individual found to be under 18 is immediately removed from our systems and reported to the relevant authorities where required.</p>
+
+      <h2 id="compliance">Platform Compliance</h2>
+      <p>We operate within the rules of every platform we serve, including but not limited to OnlyFans, Fansly, Fanvue, ManyVids, LoyalFans, JustForFans, and others. Our staff are trained on each platform's terms and prohibited content categories. We do not engage in:</p>
+      <ul>
+        <li>Off-platform solicitation or contact exchange.</li>
+        <li>Content that violates platform community standards.</li>
+        <li>Promotion of illegal, exploitative, or harmful activity.</li>
+        <li>Use of unauthorized automation, bots, or generative AI for messaging without explicit creator consent.</li>
+      </ul>
+
+      <h2 id="cookies">Cookie Policy</h2>
+      <p>This site uses minimal cookies — strictly necessary for functionality, plus anonymized analytics. We do not use third-party advertising trackers. By continuing to use the site, you consent to our cookie use as described.</p>
+
+      <h2 id="contact">Contact &amp; DMCA</h2>
+      <p>For privacy questions: <a href="mailto:privacy@luxoraagency.com">privacy@luxoraagency.com</a><br/>
+      For DMCA / copyright takedowns: <a href="mailto:legal@luxoraagency.com">legal@luxoraagency.com</a><br/>
+      For general inquiries: <a href="mailto:contact@luxoraagency.com">contact@luxoraagency.com</a></p>
+
+      <p style="margin-top:3rem; padding-top:2rem; border-top:1px solid var(--line); font-size:0.88rem; color:var(--text-mute);">
+        LUXORA Agency reserves the right to update these policies at any time. Material changes will be communicated to active partners and reflected in the "last updated" date above.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="index.html" class="logo"><span class="luxora">LUXORA</span><span class="agency">AGENCY</span></a>
+        <p>Built for creators who are serious about growth.</p>
+        <div class="socials">
+          <a href="#" class="social" aria-label="Instagram"><svg><use href="#i-instagram"/></svg></a>
+          <a href="#" class="social" aria-label="Telegram"><svg><use href="#i-telegram"/></svg></a>
+          <a href="#" class="social" aria-label="Twitter / X"><svg><use href="#i-x"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>For Creators</h4>
+        <ul>
+          <li><a href="index.html#how">How It Works</a></li>
+          <li><a href="index.html#about">About Us</a></li>
+          <li><a href="apply-creator.html">Apply Now</a></li>
+          <li><a href="index.html#faq">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>For Chatters</h4>
+        <ul>
+          <li><a href="apply-chatter.html">Apply</a></li>
+          <li><a href="index.html#chatters">Join Team</a></li>
+          <li><a href="index.html#chatters">Training</a></li>
+          <li><a href="index.html#chatters">Payouts</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="legal.html">Legal &amp; Rules</a></li>
+          <li><a href="legal.html#privacy">Privacy Policy</a></li>
+          <li><a href="legal.html#terms">Terms of Use</a></li>
+          <li><a href="mailto:contact@luxoraagency.com">contact@luxoraagency.com</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-partners">
+      <span class="lbl">Platforms</span>
+      <div class="partner"><span class="name">OnlyFans</span></div>
+      <div class="partner"><span class="name">Fanvue</span></div>
+      <div class="partner"><span class="name">Pornhub</span></div>
+      <div class="partner"><span class="name">Brazzers</span></div>
+      <div class="partner"><span class="name">Fansly</span></div>
+      <div class="partner"><span class="name">ManyVids</span></div>
+    </div>
+
+    <div class="footer-bot">
+      <p>© <span id="year"></span> LUXORA Agency. All rights reserved. 18+ only.</p>
+      <div class="footer-legal">
+        <a href="legal.html#privacy">Privacy Policy</a>
+        <a href="legal.html#terms">Terms of Use</a>
+        <a href="legal.html">Legal &amp; Rules</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
