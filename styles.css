@@ -1,5 +1,5 @@
 /* ================================================================
-   LUXORA AGENCY — SHARED STYLES
+   VELURRA AGENCY — SHARED STYLES
    ================================================================ */
 
 :root {
@@ -356,7 +356,7 @@ a { color: inherit; text-decoration: none; }
   align-items: baseline;
   gap: 0.55rem;
 }
-.logo .luxora {
+.logo .velurra {
   color: var(--rose);
   text-shadow: 0 0 22px rgba(232,160,180,0.45);
   background: linear-gradient(135deg, var(--rose), var(--gold-soft));
