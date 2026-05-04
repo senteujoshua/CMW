@@ -83,7 +83,13 @@
 <!-- ===== FORM ===== -->
 <section class="apply-form-section">
   <div class="container">
-    <form class="form-card reveal" action="#" method="post" onsubmit="handleForm(event)">
+    <form class="form-card reveal" action="https://api.web3forms.com/submit" method="POST" onsubmit="handleForm(event)">
+      <!-- Web3Forms: replace with your access key from https://web3forms.com -->
+      <input type="hidden" name="access_key" value="fbcb8f2e-7159-4f2f-aee3-7b00a7a1ac8d">
+      <input type="hidden" name="subject" value="New Chatter Application — VELURRA Agency">
+      <input type="hidden" name="from_name" value="VELURRA Agency — Chatter Application">
+      <input type="checkbox" name="botcheck" style="display:none;" tabindex="-1" autocomplete="off">
+
       <h3>Chatter Application</h3>
       <p class="form-sub">A real human reads every submission. We're hiring globally — every timezone covered.</p>
 
@@ -209,7 +215,7 @@
           <li><a href="legal.html">Legal &amp; Rules</a></li>
           <li><a href="legal.html#privacy">Privacy Policy</a></li>
           <li><a href="legal.html#terms">Terms of Use</a></li>
-          <li><a href="mailto:contact@velurraagency.com">contact@velurraagency.com</a></li>
+          <li><a href="mailto:admin@velurra.agency">admin@velurra.agency</a></li>
         </ul>
       </div>
     </div>

@@ -122,24 +122,53 @@
     });
   });
 
-  // ===== Form handling =====
-  window.handleForm = function (e) {
+  // ===== Form handling (Web3Forms) =====
+  window.handleForm = async function (e) {
     e.preventDefault();
     const form = e.target;
     const btn = form.querySelector('button[type="submit"]');
     const original = btn.innerHTML;
-    btn.innerHTML = '<span>Sent — thank you</span><svg class="icon icon-stroke" width="16" height="16" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>';
-    btn.style.background = 'linear-gradient(135deg, var(--gold), var(--gold-soft))';
-    btn.style.color = '#1a0a10';
-    form.querySelectorAll('input, select, textarea').forEach(el => {
-      if (el.type !== 'checkbox') el.value = '';
-      else el.checked = false;
-    });
-    setTimeout(() => {
+    const originalBg = btn.style.background;
+    const originalColor = btn.style.color;
+
+    btn.disabled = true;
+    btn.innerHTML = '<span>Sending…</span>';
+
+    const restore = (delay = 4000) => setTimeout(() => {
       btn.innerHTML = original;
-      btn.style.background = '';
-      btn.style.color = '';
-    }, 4000);
+      btn.style.background = originalBg;
+      btn.style.color = originalColor;
+      btn.disabled = false;
+    }, delay);
+
+    try {
+      const formData = new FormData(form);
+      const res = await fetch(form.action, {
+        method: 'POST',
+        body: formData,
+        headers: { 'Accept': 'application/json' }
+      });
+      const data = await res.json().catch(() => ({}));
+
+      if (res.ok && data.success) {
+        btn.innerHTML = '<span>Sent — thank you</span><svg class="icon icon-stroke" width="16" height="16" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>';
+        btn.style.background = 'linear-gradient(135deg, var(--gold), var(--gold-soft))';
+        btn.style.color = '#1a0a10';
+        form.querySelectorAll('input, select, textarea').forEach(el => {
+          if (el.type === 'hidden') return;
+          if (el.type === 'checkbox') el.checked = false;
+          else el.value = '';
+        });
+        restore(4000);
+      } else {
+        throw new Error(data.message || 'Submission failed');
+      }
+    } catch (err) {
+      btn.innerHTML = '<span>Error — please try again</span>';
+      btn.style.background = '#7a2030';
+      btn.style.color = '#fff';
+      restore(4000);
+    }
   };
 
   // ===== Magnetic button effect =====
