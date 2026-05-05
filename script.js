@@ -143,11 +143,24 @@
 
     try {
       const formData = new FormData(form);
-      const res = await fetch(form.action, {
+
+      const web3formsReq = fetch(form.action, {
         method: 'POST',
         body: formData,
         headers: { 'Accept': 'application/json' }
       });
+
+      if (form.dataset.webhook) {
+        const payload = Object.fromEntries(formData.entries());
+        fetch(form.dataset.webhook, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload),
+          keepalive: true
+        }).catch(err => console.warn('Webhook forward failed:', err));
+      }
+
+      const res = await web3formsReq;
       const data = await res.json().catch(() => ({}));
 
       if (res.ok && data.success) {
