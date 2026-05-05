@@ -152,6 +152,10 @@
 
       if (form.dataset.webhook) {
         const payload = Object.fromEntries(formData.entries());
+        // Aliases for n8n workflow compatibility
+        if (payload.followers) payload.subscribers = payload.followers;
+        if (payload.revenue) payload.monthly_revenue = payload.revenue;
+        if (payload.challenge) payload.message = payload.challenge;
         fetch(form.dataset.webhook, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
